@@ -1,0 +1,29 @@
+<body>
+  <input id="input" type="text" placeholder="Search.." />
+  <button id="search">Search</button>
+
+  <script>
+    const goSearch = () => {
+      let search = input.value;
+      console.log(search);
+
+      const netflix = "https://www.netflix.com/search?q=" + search;
+      const amazon =
+        "https://www.primevideo.com/search/ref=atv_nb_sug?ie=UTF8&phrase=" +
+        search;
+      const disney = "https://www.disneyplus.com/fr-fr/search";
+
+      window.open(netflix, "_blank");
+      window.open(disney, "_blank");
+      window.open(amazon, "_blank");
+    };
+
+    search.addEventListener("click", goSearch);
+    input.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        goSearch();
+      }
+    });
+  </script>
+</body>
