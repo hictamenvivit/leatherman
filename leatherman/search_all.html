@@ -7,13 +7,13 @@
       let search = input.value;
       console.log(search);
 
-      const netflix = "https://www.netflix.com/search?q=" + search;
+      const filmGrab = "https://film-grab.com/?s=" + search;
       const amazon =
         "https://www.primevideo.com/search/ref=atv_nb_sug?ie=UTF8&phrase=" +
         search;
       const disney = "https://www.disneyplus.com/fr-fr/search";
 
-      window.open(netflix, "_blank");
+      window.open(filmGrab, "_blank");
       window.open(disney, "_blank");
       window.open(amazon, "_blank");
     };
